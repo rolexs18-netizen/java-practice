@@ -1,55 +1,35 @@
-import java.util.ArrayList;
-
+// Класс Main — точка входа в программу
 public class Main {
+
+    // Метод main — отсюда начинается выполнение
     public static void main(String[] args) {
-        System.out.println(("Привет, я изучаю Java!"));
 
+        // Создаём объект myCar класса Car
+        Car myCar = new Car();
 
-        int age = 30;
-        String name = "Алексей";
-        double price = 1200.50;
-        boolean isAdmin = true;
+        // Задаём полям значения
+        myCar.color = "Синий";
+        myCar.maxSpeed = 180;
 
+        // Вызываем метод drive()
+        myCar.drive();
 
-        System.out.println("Имя: " + name);
-        System.out.println("Возраст: " + age);
-        System.out.println("Цена: " + price);
-        System.out.println("Админ?: " + isAdmin);
+        // Выводим информацию о машине
+        System.out.println("Цвет: " + myCar.color);
+        System.out.println("Максимальная скорость: " + myCar.maxSpeed);
+    }
+}
 
+// Класс Car — шаблон для создания автомобилей
+class Car {
+    // Поле color — цвет автомобиля
+    String color;
 
-        int a = 10;
-        int b = 3;
+    // Поле maxSpeed — максимальная скорость
+    int maxSpeed;
 
-        System.out.println(a + b);
-        System.out.println(a - b);
-        System.out.println(a * b);
-        System.out.println(a / b);
-        System.out.println(a % b);
-
-
-        if (age >= 18) {
-            System.out.println("Совершеннолетний");
-        } else {
-            System.out.println("Несовершеннолетний");
-        }
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Квадрат: " + (i * i));
-        }
-        int[] numbers = {5, 10, 15};
-        for (int i = 0; i < numbers.length; i++)
-
-            System.out.println("Номер: " + numbers[i]);
-        ArrayList<String> cities = new ArrayList<>();
-
-        cities.add("Москва");
-        cities.add("Кострома");
-        cities.add("Сочи");
-        System.out.println("Размер списка: " + cities.size());
-
-        for (String city : cities) {
-            System.out.println(city);
-
-        }
-
+    // Метод drive — выводит сообщение
+    void drive() {
+        System.out.println("Машина едет");
     }
 }
