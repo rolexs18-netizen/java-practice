@@ -1,35 +1,18 @@
-// Класс Main — точка входа в программу
 public class Main {
 
-    // Метод main — отсюда начинается выполнение
     public static void main(String[] args) {
+        int x = 17;
+        int y = 5;
+        System.out.println(x + y);
+        System.out.println(x - y);
+        System.out.println(x * y);
+        System.out.println(x / y);
+        System.out.println(x % y);
 
-        // Создаём объект myCar класса Car
-        Car myCar = new Car();
+        String s1 = "Привет";// литерал, кладётся в пул строк
+        String s2 = new String("Привет");// новый объект, отдельная память
 
-        // Задаём полям значения
-        myCar.color = "Синий";
-        myCar.maxSpeed = 180;
-
-        // Вызываем метод drive()
-        myCar.drive();
-
-        // Выводим информацию о машине
-        System.out.println("Цвет: " + myCar.color);
-        System.out.println("Максимальная скорость: " + myCar.maxSpeed);
-    }
-}
-
-// Класс Car — шаблон для создания автомобилей
-class Car {
-    // Поле color — цвет автомобиля
-    String color;
-
-    // Поле maxSpeed — максимальная скорость
-    int maxSpeed;
-
-    // Метод drive — выводит сообщение
-    void drive() {
-        System.out.println("Машина едет");
+        System.out.println(s1 == s2);      // false, потому что разные объекты
+        System.out.println(s1.equals(s2)); // true, потому что текст одинаковый
     }
 }
