@@ -1,18 +1,44 @@
 public class Main {
-
     public static void main(String[] args) {
-        int x = 17;
-        int y = 5;
-        System.out.println(x + y);
-        System.out.println(x - y);
-        System.out.println(x * y);
-        System.out.println(x / y);
-        System.out.println(x % y);
 
-        String s1 = "Привет";// литерал, кладётся в пул строк
-        String s2 = new String("Привет");// новый объект, отдельная память
+        // Логическая переменная isAdmin — признак администратора (true/false)
+        boolean isAdmin = true;
 
-        System.out.println(s1 == s2);      // false, потому что разные объекты
-        System.out.println(s1.equals(s2)); // true, потому что текст одинаковый
+        // Строка password хранит правильный пароль
+        String password = "12345";
+
+        // Строка input имитирует введённый пароль (сейчас специально неверный)
+        String input = "22222";
+
+        // Проверяем два условия одновременно:
+        // password.equals(input) — совпадает ли содержимое строк
+        // isAdmin == true — является ли пользователь админом
+        // && означает «И»: оба условия должны быть истинны
+        if (password.equals(input) && isAdmin) {
+
+            // Если оба условия true, выполняется этот блок
+            System.out.println("Доступ разрешён");
+
+        } else {
+
+            // Если хотя бы одно условие false, выполняется этот блок
+            System.out.println("Доступ запрещён");
+
+        }
+
+        // Цикл while: сначала проверяет условие, потом выполняет тело
+        int i = 1;                // начинаем с 1
+        while (i <= 4) {          // пока i меньше или равно 4
+            System.out.println("Число: " + i); // выводим текущее i
+            i = i + 1;            // увеличиваем i на 1
+        }
+
+        // Цикл do-while: сначала выполняет тело один раз, потом проверяет условие
+        int j = 0;                // начинаем с 0
+        do {
+            System.out.println("Число: " + j); // выводим текущее j
+            j = j + 1;            // увеличиваем j на 1
+        } while (j < 5);          // проверяем условие ПОСЛЕ выполнения тела
+
     }
 }
